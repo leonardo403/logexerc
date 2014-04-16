@@ -1,0 +1,18 @@
+/*
+Author: Leonardo Lima
+Data: 16/04/2014;
+
+*/
+@charset "UTF-8";
+
+.title{text-align: center;font-size: 25px;}
+hr{margin:0 30%;position: relative;top: 10px;width: 470px;border: 2px solid black;}
+
+fieldset{margin:0 30%;width: 445px;height: 70px;position: relative;top: -10px;}
+
+table{margin:0 30%;width: 470px;position: relative;top:30px;border: 1px solid black;}
+thead:first-child{background-color: gray;}
+td > input{width: 3.0em;}
+
+/*input*/
+input:focus{background-color: #ddf;}
