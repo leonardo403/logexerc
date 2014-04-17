@@ -2,24 +2,24 @@
 <html>
 <head>
 	<title>Log de exercicios</title>
+	<meta charset="UTF-8">
 	<meta name="author" content="Leonardo Lima - leonardo403@gmail.com"	/>
 	<link rel="stylesheet" type="text/css" href="css/reset.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 <header><p class="title">Log de Exerc&iacute;cios</p></header>
-<form>
+<form id="frm" method="post">
 	<fieldset>
 		<legend>Adicionar Exerc&iacute;cio</legend>
-		<input type="text" value="" size="6" name="tempo" placeholder="Tempo">
-		<select name="tipo">
-			<option>Tipo ...</option>
+		<input type="text" size="6" name="tempo" id="tempo" placeholder="Tempo">
+		<select  name="tipo" id="tempo">
 			<option value="corrida">Corrida</option>
 			<option value="natacao">Nata&ccedil;&atilde;o</option>
 			<option value="bicicleta">Bicicleta</option>
 		</select>
-		<input type="date" size="8" placeholder="Data">
-		<input type="submit" value="Add" onclick="">
+		<input type="date" size="8" placeholder="Data" name="data" id="data">		
+		<input type="button" value="Add" onclick="add()">
 	</fieldset>
 </form>
 <hr>
@@ -30,10 +30,9 @@
 	<th>Data</th>
 </thead>
 	<tr>
-		<td></td>		
-		<td></td>
-		<td></td>
+		<td id="log"></td>		
 	</tr>
 </table>
+	<script type="text/javascript" src="js/exerc.js"></script>
 </body>
 </html>

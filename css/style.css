@@ -3,8 +3,6 @@ Author: Leonardo Lima
 Data: 16/04/2014;
 
 */
-@charset "UTF-8";
-
 .title{text-align: center;font-size: 25px;}
 hr{margin:0 30%;position: relative;top: 10px;width: 470px;border: 2px solid black;}
 
