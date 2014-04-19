@@ -9,7 +9,7 @@
 </head>
 <body onload="load()">
 <header><p class="title">Log de Exerc&iacute;cios</p></header>
-<div id="form">
+<form>
 	<fieldset>
 		<legend>Adicionar Exerc&iacute;cio</legend>
 		<input type="number" size="6" id="tempo" placeholder="Tempo">
@@ -20,11 +20,12 @@
 		</select>
 		<input type="date" size="8" placeholder="Data" id="data">		
 		<input type="button" value="Add" onclick="add()">
-		<input type="button" value="Clear" onclick="clear()">
+		<input type="button" value="Clear" onclick="limpar()">
 	</fieldset>
-</div>
+</form>
 <hr>
-<table id="mytable">
+<div id="myform">
+<table>
 <thead>
 	<th>Tempo</th>
 	<th>Tipo</th>
@@ -36,6 +37,7 @@
 		<td><input type="text" id="mydata" disabled="true"></td>
 	</tr>
 </table>
+</div>
 	<script type="text/javascript" src="js/exerc.js"></script>
 </body>
 </html>

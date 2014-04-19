@@ -9,16 +9,11 @@ function add() {
  	try {
     localStorage.setItem('tempo', tempo.value);
     localStorage.setItem('tipo', tipo.value);
-    localStorage.setItem('data', data.value);
+    localStorage.setItem('data', data.value);    
     
-    tempo.value = '';
-    tipo.value = '';
-    data.value = '';
-
-	document.getElementById('mytempo').value = localStorage.getItem('tempo');
+    document.getElementById('mytempo').value = localStorage.getItem('tempo');
     document.getElementById('mytipo').value  = localStorage.getItem('tipo');
-    document.getElementById('mydata').value = localStorage.getItem('data');
-	    
+    document.getElementById('mydata').value = localStorage.getItem('data');    
 }
 catch (e) {
     if (e == QUOTA_EXCEEDED_ERR) {
@@ -30,6 +25,27 @@ catch (e) {
   }
 }
 
+function saveComplexData() {
+    console.log("Saving complex data to local storage.");
+    var tempo = document.getElementById('tempo');
+	var tipo  = document.getElementById('tipo');
+	var data  = document.getElementById('data');
+	
+	var personObject = new Object();
+    personObject.tempo = tempo.value;
+    personObject.tipo = tipo.value;
+    personObject.data = data.value;
+    localStorage.setItem("person", JSON.stringify(personObject));
+
+    console.log("Restoring complex data from local storage.");
+    
+    var personObject = JSON.parse(localStorage.getItem("person"));
+    tempo.value = personObject.tempo;
+    tipo.value = personObject.tipo;
+    data.value = personObject.data;
+}
+
+
 //remove local storage key
 function rm() {
 	console.log('Remove key of local Storage.');
@@ -39,7 +55,7 @@ function rm() {
 }
 
 //clearing local storage
-function clear() {
+function limpar() {
 	console.log('clearing localStorage.');
 	localStorage.clear();
 }
