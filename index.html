@@ -7,30 +7,33 @@
 	<link rel="stylesheet" type="text/css" href="css/reset.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body>
+<body onload="load()">
 <header><p class="title">Log de Exerc&iacute;cios</p></header>
-<form id="frm" method="post">
+<div id="form">
 	<fieldset>
 		<legend>Adicionar Exerc&iacute;cio</legend>
-		<input type="text" size="6" name="tempo" id="tempo" placeholder="Tempo">
-		<select  name="tipo" id="tempo">
+		<input type="number" size="6" id="tempo" placeholder="Tempo">
+		<select id="tipo">
 			<option value="corrida">Corrida</option>
 			<option value="natacao">Nata&ccedil;&atilde;o</option>
 			<option value="bicicleta">Bicicleta</option>
 		</select>
-		<input type="date" size="8" placeholder="Data" name="data" id="data">		
+		<input type="date" size="8" placeholder="Data" id="data">		
 		<input type="button" value="Add" onclick="add()">
+		<input type="button" value="Clear" onclick="clear()">
 	</fieldset>
-</form>
+</div>
 <hr>
-<table>
+<table id="mytable">
 <thead>
 	<th>Tempo</th>
 	<th>Tipo</th>
 	<th>Data</th>
 </thead>
 	<tr>
-		<td id="log"></td>		
+		<td><input type="number" id="mytempo" disabled="true"></td>
+		<td><input type="text" id="mytipo" disabled="true"></td>		
+		<td><input type="text" id="mydata" disabled="true"></td>
 	</tr>
 </table>
 	<script type="text/javascript" src="js/exerc.js"></script>
