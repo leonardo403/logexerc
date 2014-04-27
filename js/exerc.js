@@ -1,4 +1,3 @@
-
 function add() {
 	//var  	
  var tempo = document.getElementById('tempo');
@@ -63,7 +62,7 @@ function limpar() {
 //checkout if exists 
 function load(){
 	console.log("Page loading finished.");
-	if (typeof(Storage) != "undefined") 
+	if (typeof localStorage != "undefined") 
 		{console.log("Your browser support web storage.");
 		} else{
 			console.log("Your browser not support web storage.");
